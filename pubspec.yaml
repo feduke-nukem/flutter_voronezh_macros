@@ -1,0 +1,22 @@
+name: flutter_voronezh_macros
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.6.0-268.0.dev
+
+dependencies:
+  collection: ^1.19.0
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  json: ^0.20.2
+  macros: ^0.1.3-main.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
