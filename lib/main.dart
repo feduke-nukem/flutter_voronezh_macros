@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_voronezh_macros/macro/constructable.dart';
+import 'package:flutter_voronezh_macros/macro/dispose.dart';
+import 'package:flutter_voronezh_macros/macro/inherited.dart';
 import 'package:flutter_voronezh_macros/macro/ordering.dart';
 import 'package:flutter_voronezh_macros/macro/value.dart';
 import 'package:flutter_voronezh_macros/rick_and_morty_api.dart';
@@ -128,9 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
 // }
 
 // @Stateless()
-// Widget someWidget(BuildContext context, {required String text}) => Text(
-//       text,
-//     );
+// Widget someWidget(BuildContext context, {required String text}) => Text(text);
 
 sealed class CharactersState {
   const CharactersState();
@@ -149,15 +149,22 @@ class CharactersError extends CharactersState {
   const CharactersError();
 }
 
-// @FancyField()
-// @FancyMethod()
-// class FancyClass {
-//   @NotFancyMethod(5)
-//   external void notFancyMethodYet();
-// }
+@FancyField()
+@FancyMethod()
+class FancyClass {
+  @NotFancyMethod(5)
+  external void notFancyMethodYet();
+}
 
-@Constructable(name: 'fromLol')
+@Constructable(name: 'fromSomething')
 class Fedor {
   final String name;
   final int age;
+}
+
+@DisposeMacro()
+class ClassToDispose extends Dispose {}
+
+class Dispose {
+  void dispose() {}
 }
