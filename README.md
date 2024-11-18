@@ -1,3 +1,3 @@
 # flutter_voronezh_macros
 
-A new Flutter project.
+[Meetup](https://www.youtube.com/watch?v=-N15Mb_w1Sw&ab_channel=FlutterVoronezh)
